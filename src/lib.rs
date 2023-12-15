@@ -28,6 +28,8 @@ impl Plugin for InfiniteGridPlugin {
 }
 
 #[derive(Resource, Default)]
+#[cfg_attr(feature = "reflect", derive(Reflect))]
+#[cfg_attr(feature = "reflect", reflect(Resource))]
 pub struct GlobalInfiniteGridSettings {
     pub render_settings: RenderSettings,
 }
@@ -37,6 +39,7 @@ pub struct InfiniteGrid;
 
 #[derive(Component, Copy, Clone, Debug)]
 #[cfg_attr(feature = "reflect", derive(Reflect))]
+#[cfg_attr(feature = "reflect", reflect(Component))]
 pub struct InfiniteGridSettings {
     pub x_axis_color: Color,
     pub z_axis_color: Color,
