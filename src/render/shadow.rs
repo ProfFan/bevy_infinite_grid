@@ -521,6 +521,8 @@ impl Node for GridShadowPassNode {
 }
 
 #[derive(Resource, Clone)]
+#[cfg_attr(feature = "reflect", derive(Reflect))]
+#[cfg_attr(feature = "reflect", reflect(Resource))]
 pub struct RenderSettings {
     pub max_texture_size: u32,
 }
