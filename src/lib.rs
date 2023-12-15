@@ -36,6 +36,7 @@ pub struct GlobalInfiniteGridSettings {
 pub struct InfiniteGrid;
 
 #[derive(Component, Copy, Clone, Debug)]
+#[cfg_attr(feature = "reflect", derive(Reflect))]
 pub struct InfiniteGridSettings {
     pub x_axis_color: Color,
     pub z_axis_color: Color,
